@@ -4,7 +4,7 @@ import java.util.ArrayList;
 import java.util.List;
 
 public class Biblioteca {
-    private static String nome;
+    private String nome;
     private String endereco;
     private List<Livro> livros;
 
@@ -14,7 +14,7 @@ public class Biblioteca {
     this.livros = new ArrayList<>();
     }
 
-    public static String getNome() {
+    public String getNome() {
         return nome;
     }
 
@@ -34,15 +34,8 @@ public class Biblioteca {
         livros.add(livro);
     }
 
-
-    public void listarLivros() {
-        
-        System.out.println("Livros disponíveis na biblioteca:");
-            
-        for (Livro livro : livros) {
-            System.out.println(livro.getTitulo());
-        }
-            
-        }
+    public List<Livro> listarLivros() {
+        return livros;
+    }
     }
 

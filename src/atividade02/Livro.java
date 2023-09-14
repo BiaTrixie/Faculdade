@@ -1,5 +1,6 @@
 package atividade02;
 
+
 public class Livro {
  private String titulo;
  private String autor;
@@ -54,6 +55,8 @@ public String toString() {
 public void resumo(){
     System.out.println(toString());
 }
+
+
 
 }
 
