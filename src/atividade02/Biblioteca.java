@@ -1,19 +1,20 @@
 package atividade02;
 
+import java.util.ArrayList;
 import java.util.List;
 
 public class Biblioteca {
-    private String nome;
+    private static String nome;
     private String endereco;
     private List<Livro> livros;
 
-    public Biblioteca(String nome, String endereco, List<Livro> livros){
+    public Biblioteca(String nome, String endereco){
     this.nome = nome;
     this.endereco = endereco;
-    this.livros = livros;
+    this.livros = new ArrayList<>();
     }
 
-    public String getNome() {
+    public static String getNome() {
         return nome;
     }
 
@@ -29,18 +30,19 @@ public class Biblioteca {
         this.endereco = endereco;
     }
 
-    public List<Livro> getLivros() {
-        return livros;
+    public void adicionarLivro(Livro livro) {
+        livros.add(livro);
     }
 
-    public void setLivros(List<Livro> livros) {
-        this.livros = livros;
+
+    public void listarLivros() {
+        
+        System.out.println("Livros disponíveis na biblioteca:");
+            
+        for (Livro livro : livros) {
+            System.out.println(livro.getTitulo());
+        }
+            
+        }
     }
 
-    public void adicionarLivro(Livro livro){
-
-    }
-    public String listarLivros(){
-        return nome;
-    }
-}

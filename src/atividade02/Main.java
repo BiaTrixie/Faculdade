@@ -1,13 +1,11 @@
+
 package atividade02;
-import javax.swing.JOptionPane;
 
 public class Main {
     public static void main(String[] args) {
-       Livro livro1 = new Livro( "A revolta dos bichos", "George Orwell",  2001 ,"ficcão"); 
+       Livro livro1 = new Livro( "A revolta dos bichos", "George Orwell",  2001 ,"ficcão");
 
        livro1.resumo();
-
-       JOptionPane.showMessageDialog(null, livro1, "Livro", 1);
 
        Retangulo retangulo1 = new Retangulo(7, 8);
 
@@ -16,6 +14,19 @@ public class Main {
        Animal animal1 = new Animal("Capivara","Mamífero", 5);
 
        System.out.println(animal1);
+
+       Calculadora calculadora = new Calculadora(10.0, 5.0);
+
+       System.out.println("Soma: " + calculadora.somar());
+       System.out.println("Subtração: " + calculadora.subtrair());
+       System.out.println("Multiplicação: " + calculadora.multiplicar());
+
+       try {
+           System.out.println("Divisão: " + calculadora.dividir());
+       } catch (ArithmeticException e) {
+           System.out.println( "Erro: " + e.getMessage());
+       }
     }
+
 
 }
