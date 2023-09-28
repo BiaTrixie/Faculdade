@@ -1,13 +1,13 @@
 package atividade01;
 
-public class Produto {
+public class Produtos {
     // Atributos
     private String nome;
     private double preco;
     private int quantidadeEmEstoque;
 
     // Construtor
-    public Produto(String nome, double preco, int quantidadeEmEstoque) {
+    public Produtos(String nome, double preco, int quantidadeEmEstoque) {
         this.nome = nome;
         this.preco = preco;
         this.quantidadeEmEstoque = quantidadeEmEstoque;

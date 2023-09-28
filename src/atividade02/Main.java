@@ -1,10 +1,12 @@
 
 package atividade02;
 
+import java.util.ArrayList;
+import java.util.List;
+
 public class Main {
     public static void main(String[] args) {
         Livro livro1 = new Livro("A revolta dos bichos", "George Orwell", 2001, "ficcão");
-        Biblioteca b1 = new Biblioteca("A dama e o vagabundo", "sla" );
 
         livro1.resumo();
 
@@ -28,7 +30,35 @@ public class Main {
             System.out.println("Erro: " + e.getMessage());
         }
 
-        System.out.println(b1.listarLivros());
+        Biblioteca minhaBiblioteca = new Biblioteca();
+
+        // Dados da biblioteca
+        minhaBiblioteca.setEndereco("Praça Cívica");
+        minhaBiblioteca.setNome("LivrosLivraria");
+
+        // Livro
+        Livro meuLivro = new Livro("Principe", "Nicolau Maquiavel", 1943, "Ação");
+        Livro meuLivro1 = new Livro("Principe2", "Nicolau Maquiavel", 1943, "Jornalistico");
+        Livro meuLivro2 = new Livro("Principe3", "Nicolau Maquiavel", 1943, "Romance");
+        Livro meuLivro3 = new Livro("Principe4", "Nicolau Maquiavel", 1943, "Comedia");
+
+        // Lista de Livros
+        List<Livro> estanteDeLivros = new ArrayList<>();
+
+        // Adicionando os livros a lista
+
+        estanteDeLivros.add(meuLivro);
+        estanteDeLivros.add(meuLivro1);
+        estanteDeLivros.add(meuLivro2);
+        estanteDeLivros.add(meuLivro3);
+        estanteDeLivros.add(new Livro("QualquerLivro", "Ferrari", 2023, "Horror"));
+
+        // Levando a estante para a biblioteca
+        minhaBiblioteca.setLivros(estanteDeLivros);
+
+        // Mostrar os livroos na biblioteca
+
+        minhaBiblioteca.listarLivros();
 
     }
 

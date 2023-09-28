@@ -27,7 +27,7 @@ public class Main {
         System.out.println("Novo Salário: R$" + funcionario1.getSalario());
 
         // Criando um objeto Produto
-        Produto produto1 = new Produto("Camiseta", 29.99, 100);
+        Produtos produto1 = new Produtos("Camiseta", 29.99, 100);
 
         // Testando os métodos
         System.out.println("Nome do produto: " + produto1.getNome());
