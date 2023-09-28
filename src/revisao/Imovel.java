@@ -45,10 +45,11 @@ public void setCliente(Cliente cliente) {
     this.cliente = cliente;
 }
 
-
-public String exibirInfoImovel() {
-    return "Imovel \nendereco = " + endereco + "\ntipo = " + tipo + "\nvalor = " + valor + "\ncliente = " + cliente + "\n";
+public String toString() {
+     return "Imovel \nendereco = " + endereco + "\ntipo = " + tipo + "\nvalor = " + valor + "\ncliente = " + cliente + "\n";
 }
+
+
     
 
 }

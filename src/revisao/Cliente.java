@@ -25,7 +25,7 @@ public class Cliente {
         this.contato = contato;
     }
 
-    public String exibirInfoCliente() {
+    public String toString() {
         return "cliente \nnome = " + nome + "\ncontato = " + contato + "\n";
     }
 

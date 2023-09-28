@@ -36,8 +36,11 @@ public void setImovel(Imovel imovel) {
 }
 
 
-public String exibirInfoCorretor() {
-    return "Corretor \nnomeCorretor = " + nomeCorretor + "\nregistro = " + registro + "\nimovel = " + imovel + "\n";
+public String toString() {
+     return "Corretor \nnomeCorretor = " + nomeCorretor + "\nregistro = " + registro + "\nimovel = " + imovel + "\n";
 }
+
+
+
     
 }
